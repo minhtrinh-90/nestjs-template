@@ -1,7 +1,6 @@
 # About
 
 This is my NestJS template with my preferred toolings, such as Prisma ORM, Passport, S3 upload support.
-Released under MIT License. Feel free to modify and use for your own projects.
 
 # Structure
 
@@ -11,12 +10,12 @@ Schema definition and seed script can be found in prisma folder.
 
 ## Source
 
-In the src folder, code is separated by modules, as per NestJS convention.
+In the src folder, code is organized by modules, as per NestJS convention.
 The common folder contains definitions that can be shared between modules.
 
 # Config
 
-For database connection and other sensitive config, rename .env.example to provide the necessary info.
+For database connection and other sensitive config, rename .env.example to provide the necessary environment variables.
 For other less sensitive, check src/common/configs/config.ts
 
 # Running the code
@@ -78,6 +77,10 @@ _@_ is mapped to the _src_ folder for imports.
 # Testing
 
 Sample tests provided for auth section, both unit & e2e tests.
+
+# License
+
+Released under MIT License. Feel free to change and use in your own project.
 
 # Credits
 

@@ -31,11 +31,12 @@ async function main() {
 
   // Create posts
   await prisma.post.deleteMany({});
+  const postTags = Array.from({ length: 20 }, faker.word.noun);
   const createPost = () => ({
     title: faker.lorem.sentence().slice(0, -1),
     content: faker.lorem.paragraphs(),
     imageUrl: faker.image.imageUrl(),
-    tags: Array.from({ length: 3 }, faker.word.noun).join(','),
+    tags: faker.helpers.arrayElements(postTags).join(','),
     creatorId: admin.id,
   });
   const posts = Array.from({ length: 50 }, createPost);
